@@ -1,0 +1,11 @@
+body{
+  /* background-color: red; */
+}
+
+.container{
+  padding-top: 30px;
+}
+
+.input-sm-custom{
+  width: 80%;
+}

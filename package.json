@@ -1,0 +1,19 @@
+{
+  "name": "PruebaTecnicaFactum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^0.7.4"
+  },
+  "dependencies": {
+    "spectre.css": "^0.5.8",
+    "underscore": "^1.9.1"
+  }
+}
