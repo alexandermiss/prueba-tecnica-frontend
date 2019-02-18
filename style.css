@@ -9,3 +9,17 @@ body{
 .input-sm-custom{
   width: 80%;
 }
+
+.btn-danger{
+  background:#fff;
+  border: 1px solid #e85600;
+  color: #e85600;
+}
+
+.btn-danger:hover{
+  border: 1px solid #e85600;
+}
+
+.rules tr:last-child{
+  border: none;
+}

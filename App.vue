@@ -23,6 +23,7 @@
           <tr>
             <th><div class="text-center">Name</div></th>
             <th><div class="text-center">Arguments</div></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -41,13 +42,13 @@
               </div>
             </td>
             <td colspan="2">
-              <table class="table">
+              <table class="table rules">
                 <thead>
                   <tr style="background-color: #eee;">
                     <th style="width:250px;"></th>
                     <th></th>
                     <th></th>
-                    <th style="width:100px;"><button v-on:click="addRule(kf)" class="btn btn-primary">Add rule</button></th>
+                    <th style="width:100px;"><button v-on:click="addRule(kf)" class="btn btn-primary btn-sm">Add rule</button></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -69,12 +70,13 @@
                     </td>
                     <td v-show="r.args.length == 0"></td>
                     <td v-show="r.args.length == 0"></td>
-                    <td><button class="btn btn-error btn-sm">Borrar</button></td>
+                    <td><button v-on:click="removeRule(f.rules, k)" class="btn btn-error btn-sm">Borrar</button></td>
                   </tr>
 
                 </tbody>
               </table>
             </td>
+            <td style="width:100px;"><button v-on:click="removeField(kf)" class="btn btn-danger btn-sm">Remove</button></td>
           </tr>
         </tbody>
       </table>
@@ -103,6 +105,12 @@ export default {
     },
     addRule(kf){
       this.fields[kf].rules.push({name: '', obj: {}, args: {}, arguments: {}});
+    },
+    removeRule(rules, k){
+      rules.splice(k, 1);
+    },
+    removeField(kf){
+      this.fields.splice(kf, 1);
     },
     saveField(){
       var fields = this.fields, _fields = [];
